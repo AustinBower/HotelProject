@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/storedInfo">
+        <file>RoomInfo.txt</file>
+    </qresource>
+</RCC>

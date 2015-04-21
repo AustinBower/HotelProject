@@ -1,0 +1,2 @@
+Room information:
+room#,style(values: 1, 2, or 3),costPerNight
