@@ -7,17 +7,17 @@ class Room
 {
 public:
     Room();
-    Room(int,int,float);
+    Room(QString,int,float);
     ~Room();
-    int getNum();
+    QString getNum();
     int getStyle();
     float getCost();
-    void setNum(int);
+    void setNum(QString);
     void setStyle(int);
     void setCost(float);
     QString outputString();
 private:
-    int roomNum;
+    QString roomNum;
     int roomStyle;
     float roomCost;
 };

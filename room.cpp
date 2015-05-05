@@ -2,12 +2,12 @@
 
 Room::Room()
 {
-    this->roomNum = 0;
+    this->roomNum = "0";
     this->roomStyle = 0;
     this->roomCost = 0.0;
 }
 
-Room::Room(int rNumber, int rStyle, float rCost)
+Room::Room(QString rNumber, int rStyle, float rCost)
 {
     this->roomNum = rNumber;
     this->roomStyle = rStyle;
@@ -18,7 +18,7 @@ Room::~Room()
 {
 }
 
-int Room::getNum()
+QString Room::getNum()
 {
     return this->roomNum;
 }
@@ -33,7 +33,7 @@ float Room::getCost()
     return this->roomCost;
 }
 
-void Room::setNum(int newNum)
+void Room::setNum(QString newNum)
 {
     this->roomNum = newNum;
 }
@@ -51,7 +51,7 @@ void Room::setCost(float newCost)
 QString Room::outputString()
 {
     QString allInfo = "Number: ";
-    allInfo.append(QString::number(this->roomNum) += ", ");
+    allInfo.append(this->roomNum += ", ");
     allInfo.append("Style: ");
     allInfo.append(QString::number(this->roomStyle) += ", ");
     allInfo.append("Cost: ");
