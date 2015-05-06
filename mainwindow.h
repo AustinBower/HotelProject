@@ -25,6 +25,8 @@ private slots:
 
     void on_actionAlter_Room_Info_triggered();
 
+    void on_actionReports_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "room.h"
 #include "alterroomform.h"
+#include "reports.h"
 #include <QFile>
 #include <QString>
 #include <QTextStream>
@@ -95,4 +96,10 @@ void MainWindow::on_actionAlter_Room_Info_triggered()
     //when the user selects the form, create the form and display it
     alterRoomForm *newForm = new alterRoomForm;
     newForm->show();
+}
+
+void MainWindow::on_actionReports_triggered()
+{
+    Reports *reportDialog = new Reports();
+    reportDialog->show();
 }

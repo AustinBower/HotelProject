@@ -22,7 +22,7 @@ void CheckInsDialog::paintEvent(QPaintEvent *e)
     painter.begin(this);
     Nightcharts Histogram;
     Histogram.setType(Nightcharts::Histogramm);//{Histogramm,Pie,DPie};
-    Histogram.setLegendType(Nightcharts::);//{Round,Vertical}
+    Histogram.setLegendType(Nightcharts::Vertical);//{Round,Vertical}
     Histogram.setCords(20, 20, this->width()/1.7,this->height()/1.2);
     Histogram.addPiece("February",QColor(200,10,50), 34);
     Histogram.addPiece("March",Qt::green, 27);

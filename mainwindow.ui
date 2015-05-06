@@ -50,7 +50,7 @@
      <x>0</x>
      <y>0</y>
      <width>713</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuForm">
@@ -58,6 +58,7 @@
      <string>Form</string>
     </property>
     <addaction name="actionAlter_Room_Info"/>
+    <addaction name="actionReports"/>
    </widget>
    <addaction name="menuForm"/>
   </widget>
@@ -73,6 +74,11 @@
   <action name="actionAlter_Room_Info">
    <property name="text">
     <string>Alter Room Info</string>
+   </property>
+  </action>
+  <action name="actionReports">
+   <property name="text">
+    <string>Reports</string>
    </property>
   </action>
  </widget>
