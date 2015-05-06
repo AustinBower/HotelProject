@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    //set up the ui, change the text display to read only, and maximize the screen by default
     ui->setupUi(this);
     ui->textDisplay->setReadOnly(true);
     this->showMaximized();
@@ -27,24 +28,23 @@ MainWindow::MainWindow(QWidget *parent) :
     //open a text stream on the file, create an object for each room, and store info into the objects from the file
     QTextStream in(&mFile);
     Room roomOne;
-    allRooms.push_back(roomOne);
     storeRoom(roomOne,in);
+    allRooms.push_back(roomOne);
     Room roomTwo;
-    allRooms.push_back(roomTwo);
     storeRoom(roomTwo,in);
+    allRooms.push_back(roomTwo);
     Room roomThree;
-    allRooms.push_back(roomThree);
     storeRoom(roomThree,in);
+    allRooms.push_back(roomThree);
     Room roomFour;
-    allRooms.push_back(roomFour);
     storeRoom(roomFour,in);
+    allRooms.push_back(roomFour);
     Room roomFive;
-    allRooms.push_back(roomFive);
     storeRoom(roomFive,in);
+    allRooms.push_back(roomFive);
     Room roomSix;
-    allRooms.push_back(roomSix);
     storeRoom(roomSix,in);
-
+    allRooms.push_back(roomSix);
 
     mFile.close();
 }
@@ -64,6 +64,9 @@ void MainWindow::on_calendarWidget_clicked(const QDate &date)
 
 void MainWindow::storeRoom(Room& currentRoom, QTextStream& in)
 {
+    /* a nearly identical function is also used in loginscreen and alterroomform.
+     * read in information and break it by its comma delimitation and then store the data into room objects
+     */
     QString line = in.readLine();
     QStringList list = line.split(",");
     for (int i = 0; i < list.size(); i++)
@@ -89,6 +92,7 @@ void MainWindow::storeRoom(Room& currentRoom, QTextStream& in)
 
 void MainWindow::on_actionAlter_Room_Info_triggered()
 {
+    //when the user selects the form, create the form and display it
     alterRoomForm *newForm = new alterRoomForm;
     newForm->show();
 }

@@ -21,6 +21,10 @@ alterRoomForm::alterRoomForm(QWidget *parent) :
     }
 
     //open a text stream on the file, create an object for each room, and store info into the objects from the file
+
+    /*I couldn't figure out how to properly pass in the room information from mainwindow where it was originally read in
+     * nor could I figure out how to properly return updated room information if any of the information were to be altered
+     */
     QTextStream in(&mFile);
     Room roomOne;
     storeRoom(roomOne,in);
@@ -42,6 +46,7 @@ alterRoomForm::alterRoomForm(QWidget *parent) :
     rooms.push_back(roomSix);
     mFile.close();
 
+    //for each room object in the vector, add the room's number to the roomNumsBox comboBox
     for (unsigned int i=0; i < rooms.size(); i++)
     {
         Room alterRoom = rooms.at(i);
@@ -56,6 +61,7 @@ alterRoomForm::~alterRoomForm()
 
 void alterRoomForm::storeRoom(Room& currentRoom, QTextStream& in)
 {
+    //similarly to the store function used in mainwindow, read in a line and break it by its comma delimitation and store values into room objects
     QString line = in.readLine();
     QStringList list = line.split(",");
     for (int i = 0; i < list.size(); i++)
@@ -81,9 +87,11 @@ void alterRoomForm::storeRoom(Room& currentRoom, QTextStream& in)
 
 void alterRoomForm::on_roomNumsBox_currentIndexChanged(int index)
 {
+    //clear the error label for any previous error displayed and set up temporary variables
     ui->errorLabel->clear();
     Room alterRoom;
     QString roomStuff;
+    //use a switch case to display a selected room's information based on the index value passed in
     switch (index)
     {
     case 0:
@@ -148,6 +156,7 @@ void alterRoomForm::on_roomNumsBox_currentIndexChanged(int index)
 
 void alterRoomForm::on_okButton_clicked()
 {
+    //a bunch of if/else statements set up to determine if entered in information is valid. If it is all good, edit the proper rooms information with the given values
     if (ui->newNumberLine->hasAcceptableInput())
     {
         if (ui->newNumberLine->text().size() == 3)
@@ -174,6 +183,7 @@ void alterRoomForm::on_okButton_clicked()
                             ui->styleDisplay->setText(roomStuff);
                             ui->errorLabel->setText("Currently selected room information successfully changed!");
                         }
+                        //the following else statements are simple error display messages
                         else
                         {
                             ui->errorLabel->setText("NEW COST INSUFFICIENTLY FILLED");

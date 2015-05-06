@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/storedInfo">
         <file>RoomInfo.txt</file>
+        <file>LoginInfo.txt</file>
     </qresource>
 </RCC>

@@ -15,14 +15,19 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     room.cpp \
-    alterroomform.cpp
+    alterroomform.cpp \
+    loginscreen.cpp \
+    logincreds.cpp
 
 HEADERS  += mainwindow.h \
     room.h \
-    alterroomform.h
+    alterroomform.h \
+    loginscreen.h \
+    logincreds.h
 
 FORMS    += mainwindow.ui \
-    alterroomform.ui
+    alterroomform.ui \
+    loginscreen.ui
 
 RESOURCES += \
     resources.qrc
