@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "employee.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +19,11 @@ public:
 private slots:
     void on_calendarWidget_clicked(const QDate &date);
 
+    void on_actionContact_Information_triggered();
+
 private:
     Ui::MainWindow *ui;
+    Employee *employee;
 };
 
 #endif // MAINWINDOW_H

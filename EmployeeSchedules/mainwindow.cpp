@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
+#include "employee.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -46,4 +47,17 @@ void MainWindow::on_calendarWidget_clicked(const QDate &date)
 
         file.close();
     }
+}
+
+void MainWindow::on_actionContact_Information_triggered()
+{
+    Employee employee(this);
+    employee.fillComboBox();
+
+    //employee.setModal(true);
+    employee.exec();
+    //employee = new Employee(this);
+    //employee->fillComboBox();
+    //employee->show();
+
 }
