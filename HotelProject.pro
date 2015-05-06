@@ -17,17 +17,31 @@ SOURCES += main.cpp\
     room.cpp \
     alterroomform.cpp \
     loginscreen.cpp \
-    logincreds.cpp
+    logincreds.cpp \
+    checkinsdialog.cpp \
+    nightcharts.cpp \
+    reports.cpp \
+    statsdialog.cpp \
+    viewreportdialog.cpp
 
 HEADERS  += mainwindow.h \
     room.h \
     alterroomform.h \
     loginscreen.h \
-    logincreds.h
+    logincreds.h \
+    checkinsdialog.h \
+    nightcharts.h \
+    reports.h \
+    statsdialog.h \
+    viewreportdialog.h
 
 FORMS    += mainwindow.ui \
     alterroomform.ui \
-    loginscreen.ui
+    loginscreen.ui \
+    checkinsdialog.ui \
+    reports.ui \
+    statsdialog.ui \
+    viewreportdialog.ui
 
 RESOURCES += \
     resources.qrc
