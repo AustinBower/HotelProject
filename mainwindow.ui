@@ -79,6 +79,7 @@
     </property>
     <addaction name="actionAlter_Room_Info"/>
     <addaction name="actionReports"/>
+    <addaction name="actionContact_Information"/>
    </widget>
    <addaction name="menuForm"/>
   </widget>
@@ -99,6 +100,11 @@
   <action name="actionReports">
    <property name="text">
     <string>Reports</string>
+   </property>
+  </action>
+  <action name="actionContact_Information">
+   <property name="text">
+    <string>Contact Information</string>
    </property>
   </action>
  </widget>
