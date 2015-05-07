@@ -27,7 +27,7 @@ void Employee::on_pushButton_clicked()
 void Employee::fillComboBox() //This function was supposed to fill the comboBox by reading the names in from the
                               //file just like the textEdit, but does not work properly.
 {
-    QFile file("//home//harold//employeeschedules//contact.txt");
+    QFile file(":/storedInfo/contact.txt");
     QTextStream in(&file);
     while(!in.atEnd())
     {
@@ -41,7 +41,7 @@ void Employee::fillComboBox() //This function was supposed to fill the comboBox 
 
 void Employee::fillLineEdits() //Basically the same as the function above but for the lineEdits
 {
-    QFile file("//home//harold//employeeschedules//contact.txt");
+    QFile file(":/storedInfo/contact.txt");
     QTextStream in(&file);
     while(!in.atEnd())
     {

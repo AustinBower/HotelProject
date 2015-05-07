@@ -2,5 +2,7 @@
     <qresource prefix="/storedInfo">
         <file>RoomInfo.txt</file>
         <file>LoginInfo.txt</file>
+        <file>schedules.txt</file>
+        <file>contact.txt</file>
     </qresource>
 </RCC>

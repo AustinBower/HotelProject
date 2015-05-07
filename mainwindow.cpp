@@ -58,7 +58,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_calendarWidget_clicked(const QDate &date)
 {
     ui->label->setText(date.toString()); //This sets the date from the calendar into a string
-    QFile file("//home//harold//employeeschedules//schedules.txt");
+    QFile file(":/storedInfo/schedules.txt");
     if (file.open(QIODevice::ReadOnly)) // Open the file as read-only
     {
         ui->textEdit->clear();
