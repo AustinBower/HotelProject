@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "room.h"
+#include "employee.h"
 #include <QTextStream>
 #include <vector>
 
@@ -27,8 +28,13 @@ private slots:
 
     void on_actionReports_triggered();
 
+    void on_actionContact_Information_triggered();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    Employee *employee;
 };
 
 #endif // MAINWINDOW_H

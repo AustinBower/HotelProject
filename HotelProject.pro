@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     nightcharts.cpp \
     reports.cpp \
     statsdialog.cpp \
-    viewreportdialog.cpp
+    viewreportdialog.cpp \
+    employee.cpp
 
 HEADERS  += mainwindow.h \
     room.h \
@@ -33,7 +34,8 @@ HEADERS  += mainwindow.h \
     nightcharts.h \
     reports.h \
     statsdialog.h \
-    viewreportdialog.h
+    viewreportdialog.h \
+    employee.h
 
 FORMS    += mainwindow.ui \
     alterroomform.ui \
