@@ -43,7 +43,8 @@ FORMS    += mainwindow.ui \
     checkinsdialog.ui \
     reports.ui \
     statsdialog.ui \
-    viewreportdialog.ui
+    viewreportdialog.ui \
+    employee.ui
 
 RESOURCES += \
     resources.qrc
